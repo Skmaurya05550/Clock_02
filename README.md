@@ -1,5 +1,8 @@
 # Analog Clock
 
+https://ibb.co/31yhn1B
+
+
 This project is an **Analog Clock** with both analog and digital time display. The clock is built using HTML, CSS, and JavaScript.
 
 ## Features
