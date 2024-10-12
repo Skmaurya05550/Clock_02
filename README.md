@@ -17,7 +17,7 @@ You can clone the repository using the following command:
 
 ```bash
 
-git clone https://github.com/
+git clone https://github.com/https://github.com/Skmaurya05550/Clock_02
 
 
 
