@@ -1,0 +1,381 @@
+
+
+@font-face {
+
+    font-family: neontech;
+
+    src: url('https://walter-tronics.github.io/media/fonts/NeonTech.ttf');
+
+}
+
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body{
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #7db7cb;
+
+}
+
+#cont{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: min(80%,200px);
+
+    height: 200px;
+
+    position: relative;
+
+}
+
+#clockCont{
+
+    display: grid;
+
+    -webkit-display: grid;
+
+    -moz-display: grid;
+
+    -o-display: grid;
+
+    place-items: center;
+
+    height: 100%;
+
+    width: 100%;
+
+    background: #ef4c4d;
+
+    border-radius: 50%;
+
+    padding: 10px;
+
+    position: relative;
+
+}
+
+#innerClockCont{
+
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+#midCircle{
+
+    width: 18px;
+
+    height: 18px;
+
+    background: #444444;
+
+    border-radius: 50%;
+
+}
+
+#hourHand,#minuteHand{
+
+    background: #444444;
+
+    position: absolute;
+
+    width: 10px;
+
+    padding-top: 48px;
+
+    bottom: 50%;
+
+    border-radius: 50px;
+
+    transform-origin: bottom;
+
+    clip-path: polygon(50% 0, 100% 30%, 70% 100%, 30% 100%, 0 30%);
+
+}
+
+#minuteHand{
+
+    padding-top: 62px;
+
+}
+
+#secondHand{
+
+    position: absolute;
+
+    width: 50px;
+
+    height: 50px;
+
+    transform-origin: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 5;
+
+}
+
+#secondHand #minicircle{
+
+    background: #444444;
+
+    z-index: 2;
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    border: 3px solid #ef4c4d;
+
+}
+
+#secondHand #Hand{
+
+    width: 3px;
+
+    height: 85px;
+
+    background: #ef4c4d;
+
+    position: absolute;
+
+    bottom: 10%;
+
+    border-radius: 10px;
+
+}
+
+.digit1,.digit2,.digit3,.digit4{
+
+    position: absolute;
+
+    width: 17px;
+
+    height: 7px;
+
+    background: #444444;
+
+    border-radius: 50px;
+
+}
+
+.digit1{
+
+    top: 4%;
+
+    transform: rotate(90deg);
+
+}
+
+.digit2{
+
+    left: 1%;
+
+}
+
+.digit3{
+
+    right: 1%;
+
+}
+
+.digit4{
+
+    bottom: 4%;
+
+    transform: rotate(90deg);
+
+}
+
+.nums{
+
+    width: 100%;
+
+    height: 100%;
+
+    position: absolute;
+
+    text-align: center;
+
+    background: none;
+
+    font-weight: 700;
+
+    font-family: sans-serif;
+
+}
+
+.digit5{transform: rotate(31deg);}
+
+.digit10{transform: rotate(61deg);}
+
+.digit20{transform: rotate(121deg);}
+
+.digit25{transform: rotate(151deg);}
+
+.digit35{transform: rotate(211deg);}
+
+.digit40{transform: rotate(241deg);}
+
+.digit50{transform: rotate(301deg);}
+
+.digit55{transform: rotate(331deg);}
+
+
+
+#head{
+
+    position: absolute;
+
+    width: 120%;
+
+    top: 4%;
+
+    height: 70px;
+
+}
+
+#leftDing,#rightDing{
+
+    width: 50px;
+
+    position: relative;
+
+    transform: rotateZ(-30deg);
+
+}
+
+#rightDing{
+
+    right: -79%;
+
+    transform: rotateZ(30deg);
+
+}
+
+#leftDing span:nth-child(1),#rightDing span:nth-child(1){
+
+    position: absolute;
+
+    width: 50px;
+
+    height: 50px;
+
+    background-color: #444444;
+
+    border-radius: 50%;
+
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+
+}
+
+#leftDing span:nth-child(2),#rightDing span:nth-child(2){
+
+    width: 10px;
+
+    height: 70px;
+
+    background: #444444;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+#stand{
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 50px;
+
+    bottom: -5px;
+
+    padding: 0 30px;
+
+    z-index: -30;
+
+}
+
+#stand span{
+
+    width: 15px;
+
+    height: 50px;
+
+    background-color: #444444;
+
+    position: absolute;
+
+    border-radius: 50px;
+
+    transform: rotateZ(30deg);
+
+}
+
+#stand span:nth-child(1){
+
+    right: 30px;
+
+    transform: rotateZ(-30deg);
+
+}
+
+.digital{
+
+    position: absolute;
+
+    bottom: -10%;
+
+    font-family: neontech;
+
+    color: rgba(255, 255, 255, .8);
+
+    font-size: 1rem;
+
+}
+
+
